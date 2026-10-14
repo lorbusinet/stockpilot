@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>StockPilot — Tests</title>
+  <link rel="stylesheet" href="css/app.css">
+  <style>
+    main { margin: 0 auto; }
+    .test { display: flex; gap: 10px; padding: 8px 0; border-bottom: 1px solid var(--border); }
+    .test .err { color: var(--neg); font: 12px var(--mono); white-space: pre-wrap; }
+    .ok-mark { color: var(--pos); font-weight: 700; } .ko-mark { color: var(--neg); font-weight: 700; }
+    #summary { font-size: 18px; font-weight: 700; }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.10.3/sql-wasm.js"></script>
+  <script type="module" src="js/tests.js"></script>
+</head>
+<body>
+  <main>
+    <header class="page-head"><div><h1>Tests automatisés</h1><p class="sub">Chaque test s'exécute sur une base SQLite neuve, en mémoire</p></div></header>
+    <div class="card"><div id="summary">Exécution…</div></div>
+    <div class="card" id="results"></div>
+  </main>
+</body>
+</html>

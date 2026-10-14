@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>StockPilot</title>
+  <link rel="stylesheet" href="css/app.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.10.3/sql-wasm.js"></script>
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand"><span class="logo">◆</span><span>StockPilot</span></div>
+      <nav>
+        <a href="#/dashboard" data-route="dashboard"><span class="ic">▦</span>Tableau de bord</a>
+        <a href="#/orders" data-route="orders"><span class="ic">≡</span>Commandes</a>
+        <a href="#/products" data-route="products"><span class="ic">◫</span>Produits</a>
+        <a href="#/customers" data-route="customers"><span class="ic">◉</span>Clients</a>
+        <a href="#/journal" data-route="journal"><span class="ic">↺</span>Journal</a>
+        <a href="#/sql" data-route="sql"><span class="ic">⌘</span>Console SQL</a>
+      </nav>
+      <div class="sidebar-foot">
+        <div id="db-status" class="db-status">Démarrage…</div>
+        <div id="db-stats" class="muted small"></div>
+        <div class="foot-actions">
+          <button class="btn small ghost" id="btn-export" title="Télécharger le fichier .sqlite">Exporter</button>
+          <button class="btn small ghost" id="btn-import" title="Charger un fichier .sqlite">Importer</button>
+          <button class="btn small ghost" id="btn-reset" title="Régénérer les données de démo">Réinitialiser</button>
+        </div>
+        <a class="small" href="tests.html" target="_blank" rel="noopener">Lancer les tests automatisés ↗</a>
+      </div>
+    </aside>
+    <main id="view">
+      <div class="loading"><div class="spinner"></div><p class="loading-msg">Chargement du moteur SQLite (WebAssembly)…</p></div>
+    </main>
+  </div>
+  <div id="toasts" aria-live="polite"></div>
+  <input type="file" id="import-file" accept=".sqlite,.sqlite3,.db" hidden>
+</body>
+</html>
