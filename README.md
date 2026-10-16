@@ -5,6 +5,8 @@ Dépôt regroupant plusieurs programmes, chacun dans son propre dossier avec son
 | Programme | Description |
 |---|---|
 | [StockPilot](stockpilot/) | Gestion commerciale (stock, commandes, clients, analytique) avec toute la logique métier dans SQLite, exécuté dans le navigateur via WebAssembly |
+| [Tetris](tetris/) | Jeu Tetris dans le navigateur : ouvrir `tetris/index.html` |
+| [Nom et âge](nom-age/) | Petit formulaire qui demande le nom et l'âge : ouvrir `nom-age/nom-age.html` |
 
 ## Ajouter un programme
 
